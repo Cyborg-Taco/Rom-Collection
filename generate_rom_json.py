@@ -1,87 +1,51 @@
 #!/usr/bin/env python3
 """
-Script to generate a JSON file containing all ROMs from the Rom-Collection repository.
-This script fetches the directory structure from GitHub and creates a JSON file
-that can be used by the ROM downloader script.
+Script to download the roms.json file from the Rom-Collection repository.
+This script fetches the pre-generated JSON file that contains all ROMs.
 """
 
 import json
 import requests
 import sys
-from urllib.parse import quote
 
-GITHUB_API_BASE = "https://api.github.com/repos/Cyborg-Taco/Rom-Collection/contents"
+# Direct link to the JSON file in the repository
+JSON_URL = "https://raw.githubusercontent.com/Cyborg-Taco/Rom-Collection/main/roms.json"
 RAW_BASE = "https://raw.githubusercontent.com/Cyborg-Taco/Rom-Collection/main"
 
-def get_directory_contents(path=""):
-    """Fetch directory contents from GitHub API"""
-    url = f"{GITHUB_API_BASE}/{path}" if path else GITHUB_API_BASE
+def download_json():
+    """Download the roms.json file from the repository"""
+    print("Downloading roms.json from repository...")
     try:
-        response = requests.get(url)
+        response = requests.get(JSON_URL)
         response.raise_for_status()
-        return response.json()
+        data = response.json()
+        
+        # Ensure all games have proper path for downloading
+        # If they have download_url, convert it to path
+        # If they have path, keep it
+        if 'systems' in data:
+            for system_name, system_data in data['systems'].items():
+                if 'games' in system_data:
+                    for game in system_data['games']:
+                        # If no path field, try to construct it
+                        if 'path' not in game or not game['path']:
+                            if 'download_url' in game:
+                                # Extract path from download_url
+                                url = game['download_url']
+                                if 'Rom-Collection' in url:
+                                    path = url.split('Rom-Collection/main/')[-1]
+                                    game['path'] = path
+                            else:
+                                # Construct path from system and game name
+                                game['path'] = f"{system_name}/{game['name']}"
+        
+        return data
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching {path}: {e}", file=sys.stderr)
-        return []
-
-def scan_repository():
-    """Scan the repository and build ROM database"""
-    rom_data = {
-        "systems": {}
-    }
-    
-    print("Scanning repository root...")
-    root_contents = get_directory_contents()
-    
-    if not root_contents:
-        print("Failed to fetch root contents", file=sys.stderr)
-        return rom_data
-    
-    # Filter for directories only (these are the systems)
-    systems = [item for item in root_contents if item['type'] == 'dir']
-    
-    print(f"Found {len(systems)} systems")
-    
-    for system in systems:
-        system_name = system['name']
-        print(f"Processing system: {system_name}")
-        
-        # Get contents of the system directory
-        system_contents = get_directory_contents(system_name)
-        
-        # Filter for ROM files (common extensions)
-        rom_extensions = ['.zip', '.7z', '.rar', '.nes', '.snes', '.sfc', 
-                         '.gb', '.gbc', '.gba', '.n64', '.z64', '.v64',
-                         '.smd', '.gen', '.md', '.bin', '.iso', '.cue',
-                         '.chd', '.cdi', '.gdi', '.nds', '.3ds', '.cia']
-        
-        games = []
-        for item in system_contents:
-            if item['type'] == 'file':
-                # Check if file has a ROM extension
-                if any(item['name'].lower().endswith(ext) for ext in rom_extensions):
-                    game_entry = {
-                        "name": item['name'],
-                        "size": item['size'],
-                        "download_url": item['download_url'],
-                        "path": item['path']
-                    }
-                    games.append(game_entry)
-        
-        if games:
-            # Use the folder name as-is for the retropie directory
-            retropie_dir = system_name
-            
-            rom_data['systems'][system_name] = {
-                "display_name": system_name,
-                "retropie_directory": retropie_dir,
-                "rom_count": len(games),
-                "games": games
-            }
-            
-            print(f"  Found {len(games)} ROMs for {system_name}")
-    
-    return rom_data
+        print(f"Error downloading JSON file: {e}", file=sys.stderr)
+        return None
+    except json.JSONDecodeError as e:
+        print(f"Error parsing JSON file: {e}", file=sys.stderr)
+        return None
 
 def load_existing_json(filename):
     """Load existing JSON file if it exists"""
@@ -96,7 +60,7 @@ def load_existing_json(filename):
 
 def main():
     print("=" * 60)
-    print("ROM Collection JSON Generator")
+    print("ROM Collection JSON Downloader")
     print("=" * 60)
     print()
     
@@ -114,12 +78,20 @@ def main():
     
     print()
     
-    # Scan repository for new data
-    new_data = scan_repository()
+    # Download new data from repository
+    new_data = download_json()
+    
+    if new_data is None:
+        print("Failed to download JSON file from repository.", file=sys.stderr)
+        sys.exit(1)
     
     # Merge new data with existing data
     # This will update existing systems and add new ones
-    existing_data['systems'].update(new_data['systems'])
+    if 'systems' in new_data:
+        existing_data['systems'].update(new_data['systems'])
+    else:
+        print("Warning: Downloaded JSON doesn't have 'systems' key. Using as-is.", file=sys.stderr)
+        existing_data = new_data
     
     print()
     print(f"Writing data to {output_file}...")
@@ -128,10 +100,12 @@ def main():
         json.dump(existing_data, f, indent=2, ensure_ascii=False)
     
     print(f"Successfully updated {output_file}")
-    print(f"Total systems: {len(existing_data['systems'])}")
     
-    total_roms = sum(system['rom_count'] for system in existing_data['systems'].values())
-    print(f"Total ROMs: {total_roms}")
+    if 'systems' in existing_data:
+        print(f"Total systems: {len(existing_data['systems'])}")
+        total_roms = sum(system.get('rom_count', 0) for system in existing_data['systems'].values())
+        print(f"Total ROMs: {total_roms}")
+    
     print()
     print("You can now use this JSON file with the rom_downloader.sh script")
 
