@@ -1,0 +1,296 @@
+{
+  "systems": {
+    "gb": {
+      "display_name": "gb",
+      "retropie_directory": "gb",
+      "rom_count": 1,
+      "games": [
+        {
+          "name": "Beatmania.gbc",
+          "size": 0,
+          "path": "gb/Beatmania.gbc"
+        }
+      ]
+    },
+    "gba": {
+      "display_name": "gba",
+      "retropie_directory": "gba",
+      "rom_count": 4,
+      "games": [
+        {
+          "name": "Advance Wars (USA) (Rev 1).gba",
+          "size": 2,
+          "path": "gba/Advance Wars (USA) (Rev 1).gba"
+        },
+        {
+          "name": "Advance Wars 2 - Black Hole Rising (USA, Australia).gba",
+          "size": 2,
+          "path": "gba/Advance Wars 2 - Black Hole Rising (USA, Australia).gba"
+        },
+        {
+          "name": "Legend of Zelda, The - The Minish Cap (USA).gba",
+          "size": 2,
+          "path": "gba/Legend of Zelda, The - The Minish Cap (USA).gba"
+        },
+        {
+          "name": "Mario vs. Donkey Kong (USA, Australia).gba",
+          "size": 16777216,
+          "path": "gba/Mario vs. Donkey Kong (USA, Australia).gba"
+        }
+      ]
+    },
+    "megadrive": {
+      "display_name": "megadrive",
+      "retropie_directory": "megadrive",
+      "rom_count": 5,
+      "games": [
+        {
+          "name": "glufPD.bin",
+          "size": 1048576,
+          "path": "megadrive/glufPD.bin"
+        },
+        {
+          "name": "Sonic & Knuckles + Sonic The Hedgehog 3 (Europe).md",
+          "size": 4194304,
+          "path": "megadrive/Sonic & Knuckles + Sonic The Hedgehog 3 (Europe).md"
+        },
+        {
+          "name": "Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea).md",
+          "size": 4194304,
+          "path": "megadrive/Sonic 3D Blast ~ Sonic 3D Flickies' Island (USA, Europe, Korea).md"
+        },
+        {
+          "name": "Sonic The Hedgehog (USA, Europe).md",
+          "size": 524288,
+          "path": "megadrive/Sonic The Hedgehog (USA, Europe).md"
+        },
+        {
+          "name": "Sonic The Hedgehog 2 (World) (Rev A).md",
+          "size": 1048576,
+          "path": "megadrive/Sonic The Hedgehog 2 (World) (Rev A).md"
+        }
+      ]
+    },
+    "n64": {
+      "display_name": "n64",
+      "retropie_directory": "n64",
+      "rom_count": 24,
+      "games": [
+        {
+          "name": "Banjo-Kazooie (USA) (Rev 1).z64",
+          "size": 2,
+          "path": "n64/Banjo-Kazooie (USA) (Rev 1).z64"
+        },
+        {
+          "name": "Bomberman 64 (USA).z64",
+          "size": 8388608,
+          "path": "n64/Bomberman 64 (USA).z64"
+        },
+        {
+          "name": "Cruis'n USA (U) (V1.2) [!].z64",
+          "size": 8388608,
+          "path": "n64/Cruis'n USA (U) (V1.2) [!].z64"
+        },
+        {
+          "name": "Diddy Kong Racing (USA) (En,Fr) (Rev 1).z64",
+          "size": 12582912,
+          "path": "n64/Diddy Kong Racing (USA) (En,Fr) (Rev 1).z64"
+        },
+        {
+          "name": "Donkey Kong 64 (USA).z64",
+          "size": 33554432,
+          "path": "n64/Donkey Kong 64 (USA).z64"
+        },
+        {
+          "name": "Doom 64 (USA) (Rev 1).z64",
+          "size": 8388608,
+          "path": "n64/Doom 64 (USA) (Rev 1).z64"
+        },
+        {
+          "name": "F-Zero X (USA).z64",
+          "size": 16777216,
+          "path": "n64/F-Zero X (USA).z64"
+        },
+        {
+          "name": "Kirby 64 - The Crystal Shards (USA).z64",
+          "size": 33554432,
+          "path": "n64/Kirby 64 - The Crystal Shards (USA).z64"
+        },
+        {
+          "name": "Mario Kart 64 (USA).z64",
+          "size": 12582912,
+          "path": "n64/Mario Kart 64 (USA).z64"
+        },
+        {
+          "name": "Mario Party (USA).z64",
+          "size": 33554432,
+          "path": "n64/Mario Party (USA).z64"
+        },
+        {
+          "name": "Mario Party 2 (USA).z64",
+          "size": 33554432,
+          "path": "n64/Mario Party 2 (USA).z64"
+        },
+        {
+          "name": "Mario Party 3 (USA).z64",
+          "size": 33554432,
+          "path": "n64/Mario Party 3 (USA).z64"
+        },
+        {
+          "name": "Mario Tennis (USA).z64",
+          "size": 16777216,
+          "path": "n64/Mario Tennis (USA).z64"
+        },
+        {
+          "name": "Paper Mario (USA).z64",
+          "size": 41943040,
+          "path": "n64/Paper Mario (USA).z64"
+        },
+        {
+          "name": "Pokemon Stadium (USA) (Rev 2).z64",
+          "size": 33554432,
+          "path": "n64/Pokemon Stadium (USA) (Rev 2).z64"
+        },
+        {
+          "name": "Pokemon Stadium 2 (USA).z64",
+          "size": 67108864,
+          "path": "n64/Pokemon Stadium 2 (USA).z64"
+        },
+        {
+          "name": "Spider-Man (USA).z64",
+          "size": 33554432,
+          "path": "n64/Spider-Man (USA).z64"
+        },
+        {
+          "name": "Star Fox 64 (USA) (Rev 1).z64",
+          "size": 12582912,
+          "path": "n64/Star Fox 64 (USA) (Rev 1).z64"
+        },
+        {
+          "name": "Super Mario 64 (USA).z64",
+          "size": 8388608,
+          "path": "n64/Super Mario 64 (USA).z64"
+        },
+        {
+          "name": "Super Smash Bros. (USA).z64",
+          "size": 16777216,
+          "path": "n64/Super Smash Bros. (USA).z64"
+        },
+        {
+          "name": "Tony Hawk's Pro Skater 3 (USA).z64",
+          "size": 16777216,
+          "path": "n64/Tony Hawk's Pro Skater 3 (USA).z64"
+        },
+        {
+          "name": "Toy Story 2 - Buzz Lightyear to the Rescue! (USA) (Rev 1).z64",
+          "size": 12582912,
+          "path": "n64/Toy Story 2 - Buzz Lightyear to the Rescue! (USA) (Rev 1).z64"
+        },
+        {
+          "name": "Wave Race 64 (U) (V1.1) [!].z64",
+          "size": 8388608,
+          "path": "n64/Wave Race 64 (U) (V1.1) [!].z64"
+        },
+        {
+          "name": "Yoshi's Story (USA) (En,Ja).z64",
+          "size": 16777216,
+          "path": "n64/Yoshi's Story (USA) (En,Ja).z64"
+        }
+      ]
+    },
+    "nes": {
+      "display_name": "nes",
+      "retropie_directory": "nes",
+      "rom_count": 12,
+      "games": [
+        {
+          "name": "Adventure Island 3 (USA).nes",
+          "size": 262160,
+          "path": "nes/Adventure Island 3 (USA).nes"
+        },
+        {
+          "name": "Famidash 1.3 Beta.nes",
+          "size": 786448,
+          "path": "nes/Famidash 1.3 Beta.nes"
+        },
+        {
+          "name": "Legend of Zelda, The (USA) (Rev 1).nes",
+          "size": 131088,
+          "path": "nes/Legend of Zelda, The (USA) (Rev 1).nes"
+        },
+        {
+          "name": "Mario Bros. (World).nes",
+          "size": 24592,
+          "path": "nes/Mario Bros. (World).nes"
+        },
+        {
+          "name": "Mega Man (USA).nes",
+          "size": 131088,
+          "path": "nes/Mega Man (USA).nes"
+        },
+        {
+          "name": "Mega Man 2 (USA).nes",
+          "size": 262160,
+          "path": "nes/Mega Man 2 (USA).nes"
+        },
+        {
+          "name": "Mega Man 3 (USA).nes",
+          "size": 393232,
+          "path": "nes/Mega Man 3 (USA).nes"
+        },
+        {
+          "name": "Metroid (USA).nes",
+          "size": 131088,
+          "path": "nes/Metroid (USA).nes"
+        },
+        {
+          "name": "Snow Brothers (USA).nes",
+          "size": 262160,
+          "path": "nes/Snow Brothers (USA).nes"
+        },
+        {
+          "name": "Super Mario Bros. + Duck Hunt (USA).nes",
+          "size": 81936,
+          "path": "nes/Super Mario Bros. + Duck Hunt (USA).nes"
+        },
+        {
+          "name": "Super Mario Bros. 2 (USA) (Rev 1).nes",
+          "size": 262160,
+          "path": "nes/Super Mario Bros. 2 (USA) (Rev 1).nes"
+        },
+        {
+          "name": "Super Mario Bros. 3 (USA) (Rev 1).nes",
+          "size": 393232,
+          "path": "nes/Super Mario Bros. 3 (USA) (Rev 1).nes"
+        }
+      ]
+    },
+    "snes": {
+      "display_name": "snes",
+      "retropie_directory": "snes",
+      "rom_count": 4,
+      "games": [
+        {
+          "name": "Donkey Kong Country (U) (V1.2) [!].smc",
+          "size": 4194304,
+          "path": "snes/Donkey Kong Country (U) (V1.2) [!].smc"
+        },
+        {
+          "name": "Donkey Kong Country 2 - Diddy's Kong Quest (USA) (En,Fr) (Rev 1).sfc",
+          "size": 4194304,
+          "path": "snes/Donkey Kong Country 2 - Diddy's Kong Quest (USA) (En,Fr) (Rev 1).sfc"
+        },
+        {
+          "name": "Lemmings (U) (V1.1) [!].smc",
+          "size": 1049088,
+          "path": "snes/Lemmings (U) (V1.1) [!].smc"
+        },
+        {
+          "name": "Lemmings 2 - The Tribes (USA).sfc",
+          "size": 2097152,
+          "path": "snes/Lemmings 2 - The Tribes (USA).sfc"
+        }
+      ]
+    }
+  }
+}
