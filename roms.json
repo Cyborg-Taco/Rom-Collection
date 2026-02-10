@@ -2,7 +2,7 @@
   "systems": {
     "gb": {
       "display_name": "gb",
-      "retropie_directory": "gb",
+      "retropie_directory": "/home/pi/RetroPie/roms/gb",
       "rom_count": 1,
       "games": [
         {
@@ -15,7 +15,7 @@
     },
     "gba": {
       "display_name": "gba",
-      "retropie_directory": "gba",
+      "retropie_directory": "/home/pi/RetroPie/roms/gba",
       "rom_count": 4,
       "games": [
         {
@@ -46,7 +46,7 @@
     },
     "megadrive": {
       "display_name": "megadrive",
-      "retropie_directory": "megadrive",
+      "retropie_directory": "/home/pi/RetroPie/roms/megadrive",
       "rom_count": 5,
       "games": [
         {
@@ -83,7 +83,7 @@
     },
     "n64": {
       "display_name": "n64",
-      "retropie_directory": "n64",
+      "retropie_directory": "/home/pi/RetroPie/roms/n64",
       "rom_count": 24,
       "games": [
         {
@@ -234,7 +234,7 @@
     },
     "nes": {
       "display_name": "nes",
-      "retropie_directory": "nes",
+      "retropie_directory": "/home/pi/RetroPie/roms/nes",
       "rom_count": 12,
       "games": [
         {
@@ -313,7 +313,7 @@
     },
     "snes": {
       "display_name": "snes",
-      "retropie_directory": "snes",
+      "retropie_directory": "/home/pi/RetroPie/roms/snes",
       "rom_count": 2,
       "games": [
         {
