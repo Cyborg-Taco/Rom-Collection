@@ -36,8 +36,9 @@ ROM_EXTENSIONS = [
 def get_file_size(filepath):
     """Get file size in bytes"""
     try:
-        return os.path.getsize(filepath)
-    except OSError:
+        return os.path.getsize(str(filepath))
+    except OSError as e:
+        print(f"    Warning: Could not get size for {filepath}: {e}", file=sys.stderr)
         return 0
 
 def scan_directory(base_path):
