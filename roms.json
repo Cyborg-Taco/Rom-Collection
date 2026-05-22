@@ -42,12 +42,17 @@
     "megadrive": {
       "display_name": "megadrive",
       "retropie_directory": "megadrive",
-      "rom_count": 5,
+      "rom_count": 6,
       "games": [
         {
           "name": "glufPD.bin",
           "size": 1048576,
           "path": "megadrive/glufPD.bin"
+        },
+        {
+          "name": "Old-Towers.bin",
+          "size": 786432,
+          "path": "megadrive/Old-Towers.bin"
         },
         {
           "name": "Sonic & Knuckles + Sonic The Hedgehog 3 (Europe).md",
