@@ -15,7 +15,7 @@
     "gba": {
       "display_name": "gba",
       "retropie_directory": "gba",
-      "rom_count": 5,
+      "rom_count": 10,
       "games": [
         {
           "name": "Advance Wars (USA) (Rev 1).gba",
@@ -28,14 +28,39 @@
           "path": "gba/Advance Wars 2 - Black Hole Rising (USA, Australia).gba"
         },
         {
+          "name": "BadApple.gba",
+          "size": 14647296,
+          "path": "gba/BadApple.gba"
+        },
+        {
+          "name": "GBA-Sketch.gba",
+          "size": 1868,
+          "path": "gba/GBA-Sketch.gba"
+        },
+        {
+          "name": "gbarcade_v0.1.4.gba",
+          "size": 1143616,
+          "path": "gba/gbarcade_v0.1.4.gba"
+        },
+        {
           "name": "Legend of Zelda, The - The Minish Cap (USA).gba",
           "size": 2,
           "path": "gba/Legend of Zelda, The - The Minish Cap (USA).gba"
         },
         {
+          "name": "Lofi_Radio.gba",
+          "size": 30965760,
+          "path": "gba/Lofi_Radio.gba"
+        },
+        {
           "name": "Mario vs. Donkey Kong (USA, Australia).gba",
           "size": 16777216,
           "path": "gba/Mario vs. Donkey Kong (USA, Australia).gba"
+        },
+        {
+          "name": "Reimu and the Origin of the Purification Rod.gba",
+          "size": 259252,
+          "path": "gba/Reimu and the Origin of the Purification Rod.gba"
         },
         {
           "name": "SuperAdvancePets.gba",
