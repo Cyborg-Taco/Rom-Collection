@@ -109,7 +109,7 @@
     "n64": {
       "display_name": "n64",
       "retropie_directory": "n64",
-      "rom_count": 24,
+      "rom_count": 25,
       "games": [
         {
           "name": "Banjo-Kazooie (USA) (Rev 1).z64",
@@ -175,6 +175,11 @@
           "name": "Mario Tennis (USA).z64",
           "size": 16777216,
           "path": "n64/Mario Tennis (USA).z64"
+        },
+        {
+          "name": "mine64.n64",
+          "size": 1052680,
+          "path": "n64/mine64.n64"
         },
         {
           "name": "Paper Mario (USA).z64",
