@@ -15,7 +15,7 @@
     "gba": {
       "display_name": "gba",
       "retropie_directory": "gba",
-      "rom_count": 4,
+      "rom_count": 5,
       "games": [
         {
           "name": "Advance Wars (USA) (Rev 1).gba",
@@ -36,6 +36,11 @@
           "name": "Mario vs. Donkey Kong (USA, Australia).gba",
           "size": 16777216,
           "path": "gba/Mario vs. Donkey Kong (USA, Australia).gba"
+        },
+        {
+          "name": "SuperAdvancePets.gba",
+          "size": 240048,
+          "path": "gba/SuperAdvancePets.gba"
         }
       ]
     },
